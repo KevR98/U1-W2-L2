@@ -45,13 +45,11 @@ if (numero % 5 === 0) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const a = 32;
+const a = 8;
 const b = 12;
 
-if (a === 8 || b === 8) {
-  console.log("Il numero non è uguale a 8");
-} else if (a - 4 || b - 24) {
-  console.log("Il numero è uguale a 8");
+if (a === 8 || b === 8 || a + b === 8 || a - b === 8 || b - a === 8) {
+  console.log("Verificato!");
 }
 
 /* ESERCIZIO 5
@@ -62,19 +60,16 @@ if (a === 8 || b === 8) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const totalShoppingCart = 70;
-const shipment = 50 - totalShoppingCart;
+const totalShoppingCart = 40;
+const shipment = 10;
+let total = 0;
 
-if (totalShoppingCart >= 50) {
-  console.log(
-    "Spedizione gratuita, il checkout della è spesa è: " + totalShoppingCart
-  );
+if (totalShoppingCart > 50) {
+  total = totalShoppingCart;
+  console.log("Spedizione gratuita");
 } else {
-  console.log(
-    "Costo minimo per la spedizione gratuita è pari a 10, ti mancano: " +
-      shipment +
-      "€"
-  );
+  total = shipment + totalShoppingCart;
+  console.log("Il totale da pagare è " + total + "€");
 }
 
 /* ESERCIZIO 6
@@ -84,17 +79,16 @@ if (totalShoppingCart >= 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const totale = totalShoppingCart * 0.2;
-const tot = totale;
+const totalShoppingCart2 = 55;
+const shipment2 = 10;
+let total2 = 0;
 
-if (totale >= 50) {
-  console.log("Spedizione gratuita, il checkout della è spesa è: " + totale);
+if (totalShoppingCart2 * 0.8 >= 50) {
+  total2 = totalShoppingCart;
+  console.log("Spedizione gratuita");
 } else {
-  console.log(
-    "Costo minimo per la spedizione gratuita è pari a 10, ti mancano: " +
-      tot +
-      "€"
-  );
+  total2 = totalShoppingCart2 + shipment2;
+  console.log("Il totale da pagare è " + total2 + "€");
 }
 
 /* ESERCIZIO 7
@@ -153,6 +147,15 @@ if (verifica % 2 === 0) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let val = 7;
+if (val < 5) {
+  console.log("Meno di 5");
+} else if (val < 10) {
+  console.log("Meno di 10");
+} else {
+  console.log("Uguale a 10 o maggiore");
+}
+
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
@@ -183,6 +186,7 @@ console.log(me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+// mi.skills.pop();
 me.skills.splice(1, 2);
 console.log(me);
 
@@ -203,5 +207,5 @@ console.log(numArray);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-numArray.splice(9, 10, 100);
+numArray.splice(9, 1, 100);
 console.log(numArray);
